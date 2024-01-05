@@ -1,0 +1,13 @@
+<%- include("partials/head.ejs") %>
+<h1><%= name %>'s todo list</h1>
+<h3> Add a new todo </h3>
+<form action="/" method="post">
+    <input type="text" name="text">
+    <input type="submit">
+    <button onclick="downloadTodoList()">Download</button>
+</form>
+<ul>
+<% for (todo of todos) { %>
+    <li class="todo"><%= todo.text %></li>
+<% } %>
+</ul>
